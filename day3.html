@@ -8,18 +8,34 @@
 <body>
     <!-- We want to showcase semantic tags, show links, images, and tables 
     Usually pages start with header, main, and footer tags --> 
-    <header>
+    <header id="top-section">
         <!-- We could put a link to main page Here -->
         <!-- <a href="index.html">Back to main page</a> -->
-        <a href="/" target="_blank">Back to main page</a>
+        <div><a href="/" target="_blank">Back to main page</a></div>
+        <div><a href="#footer-section">Jump to footer</a></div>
         <h1>Day 3 - More HTML</h1>
-        <h2>Some pictures and videos</h2>
+    </header>
+    <main>
+                <h2>Some pictures and videos</h2>
         <h3>Hotlink example to RTU</h3>
         <!-- In general hotlinks are to be avoid to places you don't own. -->
         <img src="https://www.rtu.lv/images/logo_en.svg?v=1.0" alt="RTU LOGO">
         <h3>Our own image from free to use source</h3>
-        <img src="img/alexander-kovalev-vansu-bridge.jpg" alt="Bridge over water">
-        <a href="https://unsplash.com/photos/a-view-of-a-bridge-over-a-body-of-water-q6Yngm9ald0?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" target="_blank">Photo by Alexender Kovalev</a>
-    </header>
+        <img src="img/alexander-kovalev-vansu-bridge.jpg" alt="Bridge over water" width="750" height="500">
+        <div>
+            <p>Photo by Alexender Kovalev</p>
+            <p>Source: <a href="https://unsplash.com/photos/a-view-of-a-bridge-over-a-body-of-water-q6Yngm9ald0?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a></p>
+        </div>
+        <h2>Embedded content</h2>
+        <h3>Video from Youtube</h3>
+        <iframe width="866" height="487" src="https://www.youtube.com/embed/i8gvSFuRHNs" title="Riga Technical University" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Map of RTU</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7318.14719353734!2d24.085205020565514!3d56.953972201797235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slv!4v1726763364782!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    </main>
+    <footer id="footer-section">
+        <p>Created for: <a href="https://estudijas.rtu.lv/course/view.php?id=679389">RTU Web Development Course - registration required</a></p>
+        <a href="#top-section">Back to Top</a> 
+    </footer>
 </body>
 </html>
