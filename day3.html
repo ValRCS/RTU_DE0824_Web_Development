@@ -16,22 +16,78 @@
         <h1>Day 3 - More HTML</h1>
     </header>
     <main>
-                <h2>Some pictures and videos</h2>
+        <h2>Some pictures and videos</h2>
         <h3>Hotlink example to RTU</h3>
+        <p>Hotlinking is practice of linking to image sources outside of our own domain. In general hotlinking should be only done to sources you control - image servers, etc.</p>
         <!-- In general hotlinks are to be avoid to places you don't own. -->
         <img src="https://www.rtu.lv/images/logo_en.svg?v=1.0" alt="RTU LOGO">
         <h3>Our own image from free to use source</h3>
+        <p>Image from Unsplash which is one of the premier sources of free to use images.</p>
         <img src="img/alexander-kovalev-vansu-bridge.jpg" alt="Bridge over water" width="750" height="500">
         <div>
             <p>Photo by Alexender Kovalev</p>
             <p>Source: <a href="https://unsplash.com/photos/a-view-of-a-bridge-over-a-body-of-water-q6Yngm9ald0?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a></p>
         </div>
+        <h2>Simple Audio Player</h2>
+        <p>Nightingale from Wikipedia</p>
+        <audio controls>
+            <source src="audio/XN_Luscinia_megarhynchos_012.ogg" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <a href="https://en.wikipedia.org/wiki/Common_nightingale">Wikipedia on Nightingale</a>
         <h2>Embedded content</h2>
         <h3>Video from Youtube</h3>
         <iframe width="866" height="487" src="https://www.youtube.com/embed/i8gvSFuRHNs" title="Riga Technical University" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3>Map of RTU</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7318.14719353734!2d24.085205020565514!3d56.953972201797235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slv!4v1726763364782!5m2!1sen!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
+        <hr>
+        <aside>
+
+            <h2>Some tables</h2>
+            <p>Tables are used to display data in a grid format. They are made up of rows and columns that intersect to form cells, which can contain data.</p>
+            <h3>Simple table</h3>
+            <table style="border: 2px solid rgb(143, 40, 40);">
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+            </table>
+            <h3>Table with headers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        <hr>
     </main>
     <footer id="footer-section">
         <p>Created for: <a href="https://estudijas.rtu.lv/course/view.php?id=679389">RTU Web Development Course - registration required</a></p>
