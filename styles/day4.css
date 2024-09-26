@@ -1,0 +1,9 @@
+/*
+We use CSS comments to explain the code.
+In this case, we are setting the background color of the body to aliceblue.
+
+*/
+
+body {
+    background-color: aliceblue;
+}
