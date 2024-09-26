@@ -13,3 +13,51 @@ body {
 p {
     background-color: lightblue;
 }
+
+/* now I can add a rule that all fonts in strong tags will be blue 
+also I will make the strong tag even more bold by using the font-weight property
+i could also make it italic by using the font-style property
+*/
+strong {
+    color: blue;
+    /* font-weight: bolder; */ /* relative value */
+    font-weight: 900; /* absolute max value */
+    font-style: italic;
+    /* how about adding underline */
+    /* text-decoration: underline; */
+    /* underline should be used sparingly because it can be confused with links */
+}
+
+/* now I will add a rule for footer to have a border around it */
+footer {
+    border: 1px solid black;
+    /* let's add round 5px corners */
+    border-radius: 5px;
+}
+
+/* now I will add background color to the h3 tags */
+h3 {
+    background-color: lightgreen;
+}
+
+/* now I will add a rule to class  internal-h3 to have a different background color 
+NOTE THE DOT!*/
+.internal-h3 {
+    background-color: lightyellow;
+}
+
+/* next I will style id called header-section with a border 
+NOTE THE HASH! */
+
+#header-section {
+    border: 1px solid black;
+    /* let's add round 5px corners */
+    border-radius: 5px;
+}
+
+/* now I will demonstrate the !important rule when applied to class important-code 
+this will override any other rule as long as it is not important ...*/
+
+.important-code {
+    color: rgb(255, 0, 208) !important;
+}
