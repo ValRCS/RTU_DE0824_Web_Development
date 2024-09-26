@@ -7,3 +7,9 @@ In this case, we are setting the background color of the body to aliceblue.
 body {
     background-color: aliceblue;
 }
+
+/* now I will apply a background rule to all paragraphs */
+
+p {
+    background-color: lightblue;
+}
