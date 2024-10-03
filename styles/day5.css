@@ -1,7 +1,24 @@
+body {
+    /* margin: 30px; */
+    margin: 10%;
+}
+
+
 .linkies {
     background-color: aquamarine;
 }
 
 .spanny {
     color: red;
+}
+
+.blocky {
+    background-color: lightblue;
+    border: 2px solid black;
+    /* let's do rounded corners */
+    border-radius: 3px;
+    /* let's add some margin */
+    margin: 10px;
+    /* let's add some padding */
+    padding: 5px;
 }
