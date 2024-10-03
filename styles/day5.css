@@ -3,6 +3,11 @@ body {
     margin: 10%;
 }
 
+main {
+    position: relative;
+    /* above rule would mean that any descendant element using position absolute would be positioned relative to the main element */
+    /* this is because the main element is the nearest positioned ancestor */
+}
 
 .linkies {
     background-color: aquamarine;
@@ -21,4 +26,38 @@ body {
     margin: 10px;
     /* let's add some padding */
     padding: 5px;
+}
+
+.block-1 {
+    background-color: lightcoral;
+    position: relative;
+    /* this means I can adjust its relative position */
+    /* for example top: 10px; would push down element 10 px relative to its original pos */
+    /* bottom: 200px; */
+    top: -10px;
+    left: -20px;
+    /* right: 50px; */
+
+}
+
+.block-2 {
+    position: absolute;
+    /* position absolute means it is positioned relative to the nearest positioned ancestor */
+    /* if there is no positioned ancestor, it is positioned relative to the initial containing block */
+    /* if there is no positioned ancestor and no initial containing block, it is positioned relative to the viewport */
+    top: 5px;
+    left: 40%;
+    /* in this case nearest positioned ancestor is the main element */
+    /* so our block-2 is positioned 5px from the top of the main element */
+}
+
+.block-3 {
+    position: fixed;
+    /* position fixed means it is positioned relative to the viewport */
+    bottom: 10px;
+    right: 10px;
+    /* usually we add high z-index to fixed elements */
+    /* default is 0 */
+    /* I've seen very high z-index values like 1000 */
+    z-index: 100;
 }
