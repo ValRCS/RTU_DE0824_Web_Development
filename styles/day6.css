@@ -1,0 +1,45 @@
+/* let's have a standard font size for the body */
+body {
+    font-size: 24px; /* we could have used 1em */
+}
+
+header {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* I am going to apply media queries by taking the width of the screen into account */
+/* I am going to go from the smallest screen to the largest */
+/* I will use the min-width property */
+/* I could use the max-width property but generally you do not want to mix them*/
+/* my first break point will be 576px */
+/* at that point I will change background color of the header */
+
+@media (min-width: 576px) {
+    body {
+        font-size: 20px;
+    }
+    header {
+        background-color: lightgreen;
+    }
+}
+
+/* next break point will be 768px */
+/* at that point I will change background color of the header */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        background-color: lightyellow;
+    }
+    /* i will also add background color to the footer */
+    footer {
+        background-color: rgb(168, 220, 148);
+    }
+}
+
+/* other common break points are 992px and 1200px */
