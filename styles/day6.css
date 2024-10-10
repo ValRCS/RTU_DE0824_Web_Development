@@ -29,6 +29,12 @@ header {
     background-color: rgb(242, 222, 141);
 }
 
+.mini-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* I am going to apply media queries by taking the width of the screen into account */
