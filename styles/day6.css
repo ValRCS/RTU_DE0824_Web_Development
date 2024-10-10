@@ -10,6 +10,27 @@ header {
     padding: 10px;
 }
 
+/* let me define flexbox-container class as a flex container */
+.flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* also let me define flexbox-item class with specific width and height and margin  and border */
+/* these are children of the flex container */
+.flexbox-item {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(242, 222, 141);
+}
+
+
+
 /* I am going to apply media queries by taking the width of the screen into account */
 /* I am going to go from the smallest screen to the largest */
 /* I will use the min-width property */
