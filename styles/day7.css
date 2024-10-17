@@ -1,3 +1,8 @@
+/* let's increase default font size for the whole page */
+html {
+    font-size: 1.5rem; /* 24px == 16px * 1.5 */
+}
+
 /* lets make all links use monospace font */
 a {
     font-family: monospace;
@@ -21,4 +26,44 @@ a {
 a:hover {
     background-color: lightcoral;
     color: rgb(124, 226, 93);
+}
+
+/* let's show you visited effect */
+a:visited {
+    background-color: rgb(84, 8, 8);
+    color: rgb(138, 166, 130);
+}
+
+/* let's give some size to boxy class */
+.boxy {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    /* width: 100px;
+    height: 100px; */
+}
+
+/* let's make a 3x2 grid by using the wrapper class as parent */
+.wrapper {
+    display: grid;
+    /* let's start with 2 columns */
+    /* we can say we want left column take 1/6, middle 3/6 and right 2/6 of the space */
+    /* grid-template-columns: 1fr 3fr 2fr; */
+    /* we can also hard code the sizes */
+    grid-template-columns: 100px 300px 200px;
+    /* let's add some gap between the columns */
+    gap: 10px;  
+    /* let's add some rows 
+    note without explicit instructions the 3rd row will remain empty
+    because we only have 6 elements and 9 grid cells*/
+    grid-template-rows: 120px 75px 90px;
+
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    /* gap: 10px;
+    grid-template-areas:
+        "box1 box2 box3"
+        "box4 box5 box6"; */
 }
