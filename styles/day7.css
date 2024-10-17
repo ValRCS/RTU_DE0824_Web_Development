@@ -1,0 +1,24 @@
+/* lets make all links use monospace font */
+a {
+    font-family: monospace;
+    /* background-color: lightblue; */
+    /* border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black; */
+}
+
+/* lets make ineternal links use a different color */
+/* TODO see why it does not recognize the local-link class */
+/* a:local-link {
+    background-color: lightcoral;
+    color: rgb(124, 226, 93);
+} */
+
+/* let's show you hover effect */
+a:hover {
+    background-color: lightcoral;
+    color: rgb(124, 226, 93);
+}
