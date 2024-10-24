@@ -52,3 +52,61 @@ body {
     transform: scale(0.5);
     transition: transform 2s;
 }
+
+.fox-box-4 {
+    transform: scale(0.25);
+}
+
+/* let's make the fifth fox box skew left and right as long as it is hovered */
+/* .fox-box-5:hover {
+    transform: skew(20deg, 20deg);
+    transition: transform 1.5s;
+} */
+
+/* let's make the fifth fox box keep skewing left and right when it is hovered */
+.fox-box-5:hover {
+    animation: myskew 1.5s infinite;
+}
+
+/* so we call this animation skew and we define it here */
+@keyframes myskew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+    50% {
+        transform: skew(20deg, 20deg);
+    }
+    100% {
+        transform: skew(0deg, 0deg);
+    }
+}
+
+/* we want the last 6th fox to move around the page when hovered */
+.fox-box-6:hover {
+    animation: mymove 2.5s infinite;
+}
+
+/* we define the animation here */
+@keyframes mymove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* let's make flex wrap container of gradient-example */
+.gradient-example {
+    display: flex;
+    flex-wrap: wrap;
+}
