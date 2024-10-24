@@ -1,0 +1,54 @@
+/* let's put some global resets first */
+* {
+
+    padding: 1px;
+    box-sizing: border-box; /* 
+    CSS tricks: https://css-tricks.com/box-sizing/ */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 20px;
+
+}
+
+.transformation-example {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fox-box {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+/* let's rotate the fox when we hover over it */
+.fox-box-1:hover {
+    transform: rotate(360deg); /* you can put any degree you want */
+    transition: transform 1.5s;
+}
+
+/* lets make fox-box-2 a bit smaller */
+.fox-box-2 {
+    width: 130px;
+    height: 130px;
+}
+
+/* let's add a box shadow on hover */
+.fox-box-2:hover {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    /* box shadow experiment: https://www.cssmatic.com/box-shadow 
+    MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow*/
+    transition: box-shadow 1.5s;
+}
+
+/* third fox box should scale down to 0.5 in 2 seconds */
+.fox-box-3:hover {
+    transform: scale(0.5);
+    transition: transform 2s;
+}
