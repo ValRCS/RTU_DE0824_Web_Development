@@ -110,3 +110,61 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+.gradient-box {
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.gradient-box-1 {
+     background: linear-gradient(45deg, red, yellow);
+}
+
+/* how about 3 colors at 90 degrees */
+.gradient-box-2 {
+    background: linear-gradient(90deg, red, yellow, green);
+}
+
+/* how about 4 colors at 180 degrees */
+.gradient-box-3 {
+    background: linear-gradient(180deg, red, yellow, green, blue);
+}
+
+/* let's specify percentages */
+.gradient-box-4 {
+    background: linear-gradient(90deg, red 10%, yellow 30%, green 50%, blue 70%);
+}
+
+/* let's make the gradient move */
+.gradient-box-5 {
+    background: linear-gradient(90deg, red 10%, yellow 30%, green 50%, blue 70%);
+    background-size: 200% 200%;
+    animation: mygradient 2s infinite;
+}
+
+@keyframes mygradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* let's make box 6 show back */
+.gradient-box-6 {
+    background: linear-gradient(90deg, red 10%, yellow 30%, green 50%, blue 70%);
+    background-size: 200% 200%;
+    animation: mygradient 2s infinite;
+    animation-direction: alternate;
+}
+
+
