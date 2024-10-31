@@ -39,9 +39,32 @@ let z = x + y;
 console.log("x + y = ", z);
 
 //how about my name stored in string
-let myName = "Valdis"; //note how I am using quotes for strings
-let university = "RTU";
+//variables are CASE SENSITIVE! myname is not the same as myName
+//in Javascript stick to camelCase for variable names
+//so myVariableName is okay, but my_variable_name is not recommended
+//again try to be descriptive and fit within 1-3 words ideally
+const myName = "Valdis"; //note how I am using quotes for strings
+const university = "RTU DITF"; //imagine this data is coming from a form or a database or some other source
 //I can use + to concatenate strings or add them together
-let sentence = "My name is " + myName + " and I work at " + university
+const sentence = "My name is " + myName + " and I work at " + university
 //let's print out the sentence	
 console.log(sentence);
+//now let's add this sentence to div with id "my-custom-text"
+document.getElementById("my-custom-text").innerHTML = sentence;
+
+//i can change the values of variables
+x = 2024; //not no let anymore, since we already declared x
+y = 2025;
+z = x + y;
+console.log("x + y = ", z);
+
+//note: use short BUT descriptive variable names !
+
+//there is an older way of declaring variables with var - we will not use it
+//no need to use it anymore, let and const are better
+
+//there is also const for constant variables
+//in fact start by const and only if you need to change the value use let
+//this leads to less bugs and more readable code
+const myBirthday = "2024-10-10"; //we assume the birthday will not change...
+// myBirthday = "2025-10-10"; //this will give an error, since we cannot change a constant
