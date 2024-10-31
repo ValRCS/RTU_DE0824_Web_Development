@@ -1,7 +1,9 @@
+// // is a comment in Javascript - meant for humans to read not computers
 //so write many comments , explaining your reasoning behind the code
 //what is the purpose of the code
 //when learning it is okay to write even more comments than code
 //like you could write a comment that explains every line of code
+//so by default Javascript runs from top to bottom sequentially
 console.log("Hello from Javascript!");
 document.body.style.backgroundColor = "lightblue";
 console.log("The background color of the body has been changed to lightblue!");
