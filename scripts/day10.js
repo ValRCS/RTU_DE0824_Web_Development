@@ -100,3 +100,107 @@ toggle = !toggle; //so now toggle is false
 document.getElementById("toggle2").innerText = toggle; //false
 toggle = !toggle; //so now toggle is true again
 document.getElementById("toggle3").innerText = toggle; //true
+
+//now let's do if else statements
+//we have elements called conditional1 to conditional5
+
+//lets have a variable called isRaining
+let isRaining = true; //it is raining
+//so if it is raining we want to show "Take an umbrella"
+//i will use += to add more text to the same element
+if(isRaining) {
+    document.getElementById("conditional1").innerText += " Yeah. Take an umbrella";
+} else {
+    document.getElementById("conditional1").innerText += " Nope. No need for an umbrella";
+}
+
+//now let's change isRaining to false
+isRaining = false; //it is not raining
+//so if it is not raining we want to show "No need for an umbrella"
+if(isRaining) {
+    document.getElementById("conditional2").innerText += " Yeah. Take an umbrella";
+} else {
+    document.getElementById("conditional2").innerText += " Nope. No need for an umbrella";
+}
+
+//so based on some condition we can show different text or perform different actions
+
+//now let's have a variable called age
+let age = 18; //so we have a variable called age
+//so if age is greater than or equal to 18 we can show "You can vote"
+//let's do if else if else
+//if you are over age 120 you are probably not voting
+//if you are under 18 you cannot vote
+//lets create const conditional3 for element with id "conditional3"
+const conditional3 = document.getElementById("conditional3");
+ if(age > 120) {
+    conditional += " You are probably not voting";
+    //lets show age as well
+} if(age >= 18) {
+    conditional3.innerText += " Yay! You can vote";
+    //lets show age as well
+   
+}  else {
+    conditional3.innerText += " You cannot vote";
+    //we know this is the only option left so we do not need to check age here
+    //we know the age is under 18 here for sure
+}
+//we always add that age to the end of the text
+conditional3.innerText += " Your age is " + age;
+
+//now let's change age to 121
+age = 121; //so we have a variable called age
+//so again we do not know the value of age we need to check
+//perhaps this value came from user input or a database or call to another system
+//so if age is greater than or equal to 18 we can show "You can vote"
+//let's do if else if else
+//if you are over age 120 you are probably not voting
+
+const conditional4 = document.getElementById("conditional4");
+
+//order matters of comparisons!!
+//if we had if(age >= 18) first then we would not reach if(age > 120) because 121 is greater than 18
+
+if(age > 120) {
+    conditional4.innerText += " You are probably not voting";
+    //lets show age as well
+} else if(age >= 18) {
+    //we know in this block that we are from 18 to 120 inclusive
+    conditional4.innerText += " Yay! You can vote";
+    //lets show age as well
+   
+}  else { //here we know all ages under 18 remain
+    conditional4.innerText += " You cannot vote";
+    //we know this is the only option left so we do not need to check age here
+    //we know the age is under 18 here for sure
+}
+//we always add that age to the end of the text
+conditional4.innerText += " Your age is " + age;
+
+//now let's change age to 17
+age = 17; //so we have a variable called age
+//so again we do not know the value of age we need to check
+//perhaps this value came from user input or a database or call to another system
+
+const conditional5 = document.getElementById("conditional5");
+
+//order matters of comparisons!!
+
+if(age > 120) {
+    conditional5.innerText += " You are probably not voting";
+    //lets show age as well
+} else if(age >= 18) {
+    //we know in this block that we are from 18 to 120 inclusive
+    conditional5.innerText += " Yay! You can vote";
+    //lets show age as well
+   
+} else { //here we know all ages under 18 remain
+    conditional5.innerText += " You cannot vote";
+    //we know this is the only option left so we do not need to check age here
+    //we know the age is under 18 here for sure
+}
+//we always add that age to the end of the text
+conditional5.innerText += " Your age is " + age;
+
+//if you have many comparisons to do you can use switch statement
+//we will cover that in another lesson
