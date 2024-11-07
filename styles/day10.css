@@ -1,0 +1,16 @@
+/* I want to add a small border to table called truth-table */
+
+.truth-table {
+    border: 2px solid black;
+}
+
+/* I want th elements to have a 1px border and have background color of lightgray */
+.truth-table th {
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+/* i want a 1px border for the td elements that are inside the truth-table */
+.truth-table td {
+    border: 1px solid black;
+}

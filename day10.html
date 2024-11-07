@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 10 - Javascript comparison and logical operators, conditional branching</title>
+    <link rel="stylesheet" href="styles/day10.css">
     <script src="scripts/day10.js" defer></script>
 </head>
 <body>
@@ -38,6 +39,13 @@
         <hr>
         <h2>Logical operators</h2>
         <p>Logical operators are used to determine the logic between variables or values.</p>
+        <p>There are three logical operators in Javascript: <strong>&&</strong> (logical AND), <strong>||</strong> (logical OR), and <strong>!</strong> (logical NOT).</p>
+        <h3>Boolean Algebra</h3>
+        <p><a href="https://en.wikipedia.org/wiki/Boolean_algebra" target="_blank">Boolean algebra</a> is a branch of algebra that involves variables that can take on one of two values: true or false.</p>
+        <p>Boolean algebra is named after George Boole</p>
+        <img src="img/Portrait_of_George_Boole.png" alt="George Boole" width="200">
+        <div class="caption"><a href="https://en.wikipedia.org/wiki/George_Boole" target="_blank">George Boole</a></div>
+        
         <h3>Logical example</h3>
         <div class="javascript-example">
             <p>(5 === 5) && (6 === 6) is <span id="logical1"></span></p>
@@ -46,6 +54,44 @@
             <p>(5 === 6) || (6 === 7) is <span id="logical4"></span></p>
             <p>!(5 === 6) is <span id="logical5"></span></p>
         </div>
+        <h3>Truth table</h3>
+        <table class="truth-table">
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A && B</th>
+                <th>A || B</th>
+                <th>!A</th>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>true</td>
+                <td>true</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+        </table>
 <hr>
 <h2>Conditional branching</h2>
 <p>Conditional branching is used to execute different code blocks based on different conditions.</p>

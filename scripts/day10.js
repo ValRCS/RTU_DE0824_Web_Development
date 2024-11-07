@@ -64,3 +64,39 @@ document.getElementById("comparison6").innerText = 5 >= 6 ; //false
 
 //now comparison7
 document.getElementById("comparison7").innerText = 5 <= 6 ; //true
+
+//now let's do logical operators
+//we have 5 elements for logical operators in our html document
+//logical1 to logical5
+//let's do (5 === 5) && (6 === 6) first both true so true && true is true
+document.getElementById("logical1").innerText = (5 === 5) && (6 === 6); //true
+//we use parentheses to group our logical operations to make sure they are evaluated in the right order
+
+//now (5 === 5) && (6 === 7) 
+document.getElementById("logical2").innerText = (5 === 5) && (6 === 7); //false
+document.getElementById("logical2").innerText += " because 6 !== 7 so true and false is false"; //we can add more text to the same element
+//so using += we can add more text to the same element
+
+//now (5 === 5) || (6 === 7)
+document.getElementById("logical3").innerText = (5 === 5) || (6 === 7); //true
+document.getElementById("logical3").innerText += " because 5 === 5 is true so true or false is true";
+//only one of the conditions needs to be true for || to be true, could be both as well
+
+// (5 === 6) || (6 === 7)
+document.getElementById("logical4").innerText = (5 === 6) || (6 === 7); //false
+document.getElementById("logical4").innerText += " because 5 !== 6 and 6 !== 7 so false or false is false";
+//if both sides are false then || is false
+
+//finally we have negation operator ! 
+//!(5 === 6)
+
+document.getElementById("logical5").innerText = !(5 === 6); //true
+document.getElementById("logical5").innerText += " because 5 !== 6 so !false is true";
+
+//we can use a variable to create a toggle effect
+let toggle = true; //variable name is descriptive
+document.getElementById("toggle1").innerText = toggle; //true
+toggle = !toggle; //so now toggle is false
+document.getElementById("toggle2").innerText = toggle; //false
+toggle = !toggle; //so now toggle is true again
+document.getElementById("toggle3").innerText = toggle; //true
