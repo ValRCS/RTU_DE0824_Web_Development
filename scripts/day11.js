@@ -88,7 +88,7 @@ while (j <= 3) {
 
 counter = 1;
 //let's make an infinite loop
-while (true) {
+while (false) { //if this was true we would have a loop that asks questions until yes or counter is 10
     console.log("This is potentially an infinite loop");
     console.log("Counter is " + counter);
     //we have ways of break from the loop
@@ -104,5 +104,38 @@ while (true) {
     //there is also a continue statement that skips the rest of the loop and goes to the next iteration
     // continue; //this is useless here because we are at the end of the loop
 }
+//again above if while (false) will never run because the condition is false
+//but if you change it to true, it will run forever until you break it with the prompt
 
 console.log("We are free from the loop!");
+
+//now let's do for  loop
+
+//for loops are used to execute a block of code a number of times
+//so let's print numbers from 1 to 5
+//so let k = 1; is the initialization
+//k <= 5; is the condition
+//k++ is the increment
+for (let k = 1; k <= 5; k++) { //we could have reused i or j but let's keep it separate
+    console.log("Number is " + k);
+    //there is an alternative syntax for string interpolation
+    console.log(`Number is ${k}`); //note the backticks ` and ${} to insert the variable
+    //the backticks method is useful when you have multiple variables to insert
+    //it is also more readable
+    //back to for loop
+    //here we go back to start of the loop and k is incremented by 1 using k++
+    //then check for the condition k <= 5 is performed
+    //if true, the loop continues, if false, the loop ends
+}
+//there is no k outside the loop, it is only available inside the loop
+//this is a big difference between for and while loops
+//leads to less bugs because you can't accidentally use the counter outside the loop
+
+//lets add some text to id's block-4 to block-6
+for (let k = 4; k <= 6; k++) { //now I am reusing k, because it is a different loop
+    //get the div with id block-k
+    const block = document.querySelector("#block-" + k);
+    //set the text of the div
+    block.textContent += " Added Custom Block " + k;
+    console.log("Added Custom Block " + k);
+}
