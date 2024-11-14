@@ -1,0 +1,20 @@
+/* let's make main container have a color of lightgray 
+and have a border of 1px solid black also we want a bit of margin on left and right */
+.main-container {
+    background-color: lightgray;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* round corners */
+    border-radius: 5px;
+}
+
+/* I want all direct children of main container to have left and right padding of 10px
+*/
+.main-container > * {
+    /* padding: 10px; */
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}

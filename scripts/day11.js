@@ -1,0 +1,1 @@
+console.log("Let's talk about switch statements and loops in Javascript");
