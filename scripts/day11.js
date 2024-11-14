@@ -21,7 +21,8 @@ switch (day) {
     case "Monday":
         console.log("Today is Happy Monday");
         message = "Today is Happy Monday";
-        break;
+        break; //this breaks from the switch statement
+        //usually you want to have a break after each case, otherwise the code will continue to the next case
     case "Tuesday":
         console.log("Today is Tuesday that feels like Monday");
         message = "Today is Tuesday that feels like Monday";
@@ -84,3 +85,24 @@ while (j <= 3) {
     console.log("Added Custom Block " + j);
     j++; //increment the counter
 }
+
+counter = 1;
+//let's make an infinite loop
+while (true) {
+    console.log("This is potentially an infinite loop");
+    console.log("Counter is " + counter);
+    //we have ways of break from the loop
+    //we could ask for input to break from the loop
+    const input = prompt("Do you want to break from the loop? Type yes to break");
+    if (input === "yes" || counter >= 10) {
+        //even if user wants to keep going, we will break after 10 loops
+        console.log("Time to break free!");
+        break; //this will break out of the loop
+    }
+    //we keep going until we break
+    counter++;
+    //there is also a continue statement that skips the rest of the loop and goes to the next iteration
+    // continue; //this is useless here because we are at the end of the loop
+}
+
+console.log("We are free from the loop!");
