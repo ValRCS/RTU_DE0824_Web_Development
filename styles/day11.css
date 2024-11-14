@@ -18,3 +18,19 @@ and have a border of 1px solid black also we want a bit of margin on left and ri
     margin-left: 10px;
     margin-right: 10px;
 }
+
+/* we want some size for block class */
+.block {
+    width: 250px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+    /* center text */
+    text-align: center;
+    /* vertical center text */
+    line-height: 100px;
+    /* round corners */
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
