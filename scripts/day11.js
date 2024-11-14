@@ -134,8 +134,43 @@ for (let k = 1; k <= 5; k++) { //we could have reused i or j but let's keep it s
 //lets add some text to id's block-4 to block-6
 for (let k = 4; k <= 6; k++) { //now I am reusing k, because it is a different loop
     //get the div with id block-k
-    const block = document.querySelector("#block-" + k);
+    const block = document.querySelector("#block-" + k); //note how I ask for specific block id using k
+    //note how we acquire the block variable using const
+    //this const block is only available inside the loop and during each iteration
+    //each iteration/link of the loop has its own block variable! 
+    //so no conflicts between the blocks
+    //const is appropriate here because we don't need to change the block variable
     //set the text of the div
     block.textContent += " Added Custom Block " + k;
     console.log("Added Custom Block " + k);
+
+    //let's add some random background color to each block
+    //we will use a random number generator
+    //Math.random() generates a random number between 0 and 1
+    //we will multiply it by 255 to get a number between 0 and 255
+    //we will use Math.floor() to get an integer
+
+    //get the random numbers
+    const red = Math.floor(Math.random() * 256); //0 to 255
+    const green = Math.floor(Math.random() * 256); //0 to 255
+    const blue = Math.floor(Math.random() * 256); //0 to 255
+
+    //set the background color
+    block.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
+
+//so do while loops run at least once
+//I call them "shoot first, ask questions later" loops
+//because they run the code block once and then check the condition
+//if the condition is true, they run the code block again
+//lets have some fun with do while loop
+// let m = 1;
+let m = 9000; //let's start with a big number
+//what is going to happen? It will run once, because the condition is checked after the first run
+do {
+    //so all of these lines will be be executed at least once
+    console.log("This is do while loop");
+    console.log("Counter is " + m);
+    m++;
+} while (m <= 3); //this will run 3 times, because the condition is checked after the first run
+
