@@ -127,11 +127,36 @@ addToList(ol, greetingHermes);
 //default values for some function parameters
 //we can set default values for function parameters
 //lets make a greeting function that will greet with Hello by default
-
-function greet(firstName, lastName = "Stranger") {
-    return "Hello " + firstName + " " + lastName;
+//default values should go after the required parameters
+//here firstName is required, lastName is optional and has a default value of "Stranger"
+//opening is also optional and has a default value of "Hello "
+function greet( firstName,lastName = "Stranger",  opening = "Hello ") {
+    return opening + firstName + " " + lastName;
 }
 
 console.log(greet("Mr.")); //Hello Mr. Stranger //Stranger is the default value for lastName
 //lets give it to our list
 addToList(ol, greet("Mr."));
+
+//now let's greet Bender with "Goodbye"
+console.log(greet("Bender", "Robot", "Goodbye ")); //Goodbye Bender"
+
+//now let's move onto event listeners
+//we can add event listeners to elements
+//first we define action that will be taken
+//lets make a function that changes whole body of the page to a random color
+function changeColor() {
+    //get the body element
+    const body = document.querySelector("body"); //will work only if there is one body element
+    //set the background color to a random color
+    body.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+}
+
+//i could call the function directly
+// changeColor();
+
+//instead I will add it to click event of some button
+
+//get the button element
+
+
