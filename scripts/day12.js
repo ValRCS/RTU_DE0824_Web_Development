@@ -158,5 +158,31 @@ function changeColor() {
 //instead I will add it to click event of some button
 
 //get the button element
+const button = document.querySelector("#color-button");
+
+//add event listener to the button
+//first parameter is the event name, in this case "click"
+//second parameter is the function that will be called when the event happens
+button.addEventListener("click", changeColor);
+
+//let's create a counter variable
+let counter = 0; //global variable
+//let's create a function that will increment the counter and display it
+function incrementCounter() {
+    //increment the counter
+    counter++; //add 1 to the counter
+    //get the element with id counter
+    const counterElement = document.querySelector("#counter-output");
+    //set the text of the element to the counter
+    counterElement.textContent = counter;
+}
+
+//now let's add the incrementCounter function to the click event of the counter-button
+//get the counter button
+const counterButton = document.querySelector("#counter-button");
+//add event listener to the button
+counterButton.addEventListener("click", incrementCounter);
+//we can attach the same function to multiple elements but about that later
+//we can also remove event listeners but about that later
 
 
