@@ -123,3 +123,15 @@ addToList(ol, createGreeting("Turanga", "Leela"));
 const greetingHermes = createGreeting("Hermes", "Conrad");
 //add greeting to the ordered list
 addToList(ol, greetingHermes);
+
+//default values for some function parameters
+//we can set default values for function parameters
+//lets make a greeting function that will greet with Hello by default
+
+function greet(firstName, lastName = "Stranger") {
+    return "Hello " + firstName + " " + lastName;
+}
+
+console.log(greet("Mr.")); //Hello Mr. Stranger //Stranger is the default value for lastName
+//lets give it to our list
+addToList(ol, greet("Mr."));
