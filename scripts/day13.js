@@ -33,23 +33,54 @@ function addToList(ul, text, myclass="") {
     ul.appendChild(li);
 }
 
-//let's get the list element
-const list_el = document.querySelector("#array-list"); //# because it is an id
+// //let's get the list element
+// const list_el = document.querySelector("#array-list"); //# because it is an id
 
-//let's add the cars to the list
-//we will loop/iterate through the array and add each car to the list
-//note the use of cars.length to limit the loop
-//we loop as long as i is less than the length of the array
-//i++ increments the value of i by 1
-for (let i = 0; i < cars.length; i++) {
-    console.log("Car", cars[i]);
-    // addToList(list_el, cars[i], "car");
-    //instead of adding a fixed car class let's add a class that is based on index
-    //so even car and odd car will have different styles
-    //we can use the remainder operator % to check if the number is even or odd
-    if (i % 2 === 0) {
-        addToList(list_el, cars[i], "even-car");
-    } else {
-        addToList(list_el, cars[i], "odd-car");
+// //let's add the cars to the list
+// //we will loop/iterate through the array and add each car to the list
+// //note the use of cars.length to limit the loop
+// //we loop as long as i is less than the length of the array
+// //i++ increments the value of i by 1
+// for (let i = 0; i < cars.length; i++) {
+//     console.log("Car", cars[i]);
+//     // addToList(list_el, cars[i], "car");
+//     //instead of adding a fixed car class let's add a class that is based on index
+//     //so even car and odd car will have different styles
+//     //we can use the remainder operator % to check if the number is even or odd
+//     if (i % 2 === 0) {
+//         addToList(list_el, cars[i], "even-car");
+//     } else {
+//         addToList(list_el, cars[i], "odd-car");
+//     }
+// }
+
+//let's create a addCars function that will be called when the page is loaded
+function addCars() {
+    //let's get the list element
+    const list_el = document.querySelector("#array-list"); //# because it is an id
+
+    //let's add the cars to the list
+    //we will loop/iterate through the array and add each car to the list
+    //note the use of cars.length to limit the loop
+    //we loop as long as i is less than the length of the array
+    //i++ increments the value of i by 1
+    for (let i = 0; i < cars.length; i++) {
+        console.log("Car", cars[i]);
+        // addToList(list_el, cars[i], "car");
+        //instead of adding a fixed car class let's add a class that is based on index
+        //so even car and odd car will have different styles
+        //we can use the remainder operator % to check if the number is even or odd
+        if (i % 2 === 0) {
+            addToList(list_el, cars[i], "even-car");
+        } else {
+            addToList(list_el, cars[i], "odd-car");
+        }
     }
 }
+
+//now I will add it DOM content loaded event listener
+// document.addEventListener("DOMContentLoaded", addCars);
+//for most things above is fine, but for images and other resources it might not work because they will not be loaded
+
+//instead lets do it when window is loaded
+window.addEventListener("load", addCars);
