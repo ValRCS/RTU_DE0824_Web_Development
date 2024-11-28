@@ -1,0 +1,15 @@
+/* let's add some basic color to class car */
+
+.car {
+    color: red;
+}
+
+/* now let's have background colors for even-car and odd-car classes */
+
+.even-car {
+    background-color: lightblue;
+}
+
+.odd-car {
+    background-color: lightgreen;
+}
