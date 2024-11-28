@@ -84,3 +84,108 @@ function addCars() {
 
 //instead lets do it when window is loaded
 window.addEventListener("load", addCars);
+
+//let's find add-car-button
+const add_car_button = document.querySelector("#add-car-button");
+
+//let's make a function that will be called when add-car-button is clicked
+function addCar() {
+    console.log("Add Car fired");
+    //get the input element
+    const input_el = document.querySelector("#car-input-field");
+    //get the value of the input element
+    const car = input_el.value;
+    console.log("Will add Car", car);
+    //add the car to the array
+    cars.push(car);
+    //get the list element
+    const list_el = document.querySelector("#array-list");
+    //add the car to the list
+    // addToList(list_el, car, "new-car"); // we need to add odd even check
+    //lets get the index of the car
+    const index = cars.length - 1; //it is the last car we pushed to the array at the end
+    //check if the index is even or odd
+    if (index % 2 === 0) {
+        addToList(list_el, car, "even-car");
+    } else {
+        addToList(list_el, car, "odd-car");
+    }
+}
+
+//add event listener to the add-car-button
+add_car_button.addEventListener("click", addCar); //note again addCar is a function we pass a reference to it
+
+//let's create a function that will print to console the current value of the input field
+function printInputValue() {
+    //get the input element
+    const input_el = document.querySelector("#car-input-field");
+    //get the value of the input element
+    const car = input_el.value;
+    console.log("Input Value", car);
+}
+
+//lets make it fire each time the input field changes
+//get the input element
+const input_el = document.querySelector("#car-input-field");
+//add event listener to the input field
+//we will listen to the input event
+//this event is fired each time the value of the input field changes
+input_el.addEventListener("input", printInputValue);
+
+//there is another event that is fired when value is changed and input field loses focus
+//it is called change
+//let's make a function to print the value when it changes
+function printChangedValue() {
+    //get the input element
+    const input_el = document.querySelector("#car-input-field");
+    //get the value of the input element
+    const car = input_el.value;
+    console.log("Input Value Changed", car);
+}
+
+input_el.addEventListener("change", printChangedValue);
+//so change will only fire when we go out of the input field or press enter
+
+//we have a button with clear-all-button id 
+//let's add event listener to it that will clear the input field and also ALL cars from the list
+//we will keep the array of cars, but we will remove all cars from the list element
+
+//get the clear-all-button
+const clear_all_button = document.querySelector("#clear-all-button");
+
+//let's make a function that will clear the input field and all cars from the list
+function clearAll() {
+    console.log("Clear All fired");
+    //get the input element
+    const input_el = document.querySelector("#car-input-field");
+    //clear the input field
+    input_el.value = "";
+    //get the list element
+    const list_el = document.querySelector("#array-list");
+    //clear the list element
+    list_el.innerHTML = ""; //this will remove all children of the list element
+    //quick and dirty
+    //for more complex removals we would use removeChild
+}
+
+//add event listener to the clear-all-button
+clear_all_button.addEventListener("click", clearAll);
+
+//finally we have rebuild-all-button that will clear the list and add all cars again
+//get the rebuild-all-button
+const rebuild_all_button = document.querySelector("#rebuild-all-button");
+
+//let's make a function that will clear the list and add all cars again
+function rebuildAll() {
+    console.log("Rebuild All fired");
+    //get the list element
+    const list_el = document.querySelector("#array-list");
+    //clear the list element
+    list_el.innerHTML = ""; //this will remove all children of the list element
+    //we could have called clearAll() here but this is more efficient
+    //add all cars again
+    addCars();
+}
+
+//we do need to add the event listener to the rebuild-all-button
+rebuild_all_button.addEventListener("click", rebuildAll);
